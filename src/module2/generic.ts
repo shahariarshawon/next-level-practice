@@ -33,3 +33,12 @@ const response: ApiResponse<IUser> = {
   },
 };
 console.log(response.status ? "Status ok" : "Status not ok", response.data);
+
+// generics with function
+function getIdentity<T>(value: T) {
+  return console.log("Valu is: ", value);
+}
+
+const res = getIdentity<string>("Shawon");
+const res1 = getIdentity<number>(2026);
+const res2 = getIdentity<boolean>(true);
